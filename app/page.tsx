@@ -23,18 +23,9 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Separator } from "@/components/ui/separator";
-import { Badge, badgeVariants } from "@/components/ui/badge";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Badge } from "@/components/ui/badge";
 
-import EditForm from "@/components/EditForm";
+import AddContactBtn from "@/components/AddContactBtn";
 
 export default function Home() {
   return (
@@ -90,20 +81,7 @@ export default function Home() {
             <Filter className="w-4 h-4 mr-2" /> Filter
           </Button>
           <Separator orientation="vertical" />
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="bg-sky-600">
-                <Plus className="w-4 h-4 mr-2" /> Add Contact
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="min-w-[40rem]">
-              <DialogHeader className="mb-3">
-                <DialogTitle>Edit Contact</DialogTitle>
-              </DialogHeader>
-              <Separator className="absolute top-0 left-0 mt-[54px]" />
-              <EditForm />
-            </DialogContent>
-          </Dialog>
+          <AddContactBtn />
         </div>
       </div>
       <Separator className="my-3" />
@@ -146,9 +124,7 @@ export default function Home() {
             It looks like your contact list is off to a quiet start. <br /> Add
             your contacts now to stay connected and stay organized.
           </p>
-          <Button className="bg-sky-600">
-            <Plus className="mr-2" /> Add Contact
-          </Button>
+          <AddContactBtn />
         </div>
       </main>
     </div>

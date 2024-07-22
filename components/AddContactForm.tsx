@@ -13,7 +13,7 @@ import {
 import { DatePicker } from "./DatePicker";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 
-const EditForm = () => {
+const AddContactForm = () => {
   return (
     <form className="space-y-4">
       <div className="flex items-center space-x-4">
@@ -197,4 +197,4 @@ const EditForm = () => {
   );
 };
 
-export default EditForm;
+export default AddContactForm;
